@@ -15,7 +15,6 @@ CollegeService collegeService;
     @ResponseBody
     public ResponseEntity<ResponseVO> persistCollege(@RequestBody RequestVO requestVO)
     {
-
         if (Features.FEATURE_DUMMY.isActive()) {
             ResponseVO responseVO = collegeService.persistMethod(requestVO);
             return ResponseEntity.status(HttpStatus.CREATED).body(responseVO);
